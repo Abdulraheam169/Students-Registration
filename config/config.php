@@ -11,11 +11,11 @@ if (DEBUG) {
 }
 
 
-define('DB_HOST', getenv('APP_DB_HOST') ?: '127.0.0.1');
+define('DB_HOST', getenv('APP_DB_HOST') ?: 'sql312.infinityfree.com');
 define('DB_PORT', getenv('APP_DB_PORT') ?: '3306');
-define('DB_NAME', getenv('APP_DB_NAME') ?: 'student_registration_system');
-define('DB_USER', getenv('APP_DB_USER') ?: 'root');
-define('DB_PASS', getenv('APP_DB_PASS') ?: '');   // XAMPP default root password is empty
+define('DB_NAME', getenv('APP_DB_NAME') ?: 'if0_43313600_student_registration_system');
+define('DB_USER', getenv('APP_DB_USER') ?: 'if0_43313600');
+define('DB_PASS', getenv('APP_DB_PASS') ?: 'm9wQCBgmOc');  
 
 
 define('SITE_NAME', 'Student Registration System');
