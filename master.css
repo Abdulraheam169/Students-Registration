@@ -1,0 +1,244 @@
+/* Base theme colors and typography */
+body {
+    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    color: #1f2b45;
+    background-color: #ccd5e6;
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1f2b45;
+}
+
+.page-sub {
+    color: #6c7a93;
+    font-size: 1.1rem;
+}
+
+/* Main navigation bar */
+.custom-nav {
+    background-color: #1f2e4e;
+    border-radius: 6px;
+}
+
+.custom-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: opacity 0.15s ease;
+}
+
+.custom-nav a:hover {
+    color: #ccd5e6;
+}
+
+.custom-nav a.logout-link {
+    color: #ff9b9b;
+}
+
+/* Statistics badges */
+.stat-badge,
+.stat-item {
+    background-color: #1f2e4e;
+    color: #ffffff;
+    border-radius: 8px;
+    min-width: 170px;
+}
+
+.stat-badge strong,
+.stat-item span {
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: block;
+}
+
+.stat-badge span,
+.stat-item label {
+    font-size: 0.88rem;
+    color: #ccd5e6;
+}
+
+/* Cards container and student card */
+.cards {
+    background-color: #8a93a854;
+    border-radius: 10px;
+}
+
+.box {
+    width: 100%;
+    max-width: 290px;
+    min-height: 250px;
+    position: relative;
+    background-color: #1f2e4e;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Search bar form and pagination buttons */
+.search-form {
+    background-color: #1f2e4e;
+}
+
+.search-form .form-control {
+    min-width: 200px;
+}
+
+.search-btn {
+    background-color: #4c4c9e;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+}
+
+.search-btn:hover {
+    background-color: #3b3b82;
+    color: #ffffff;
+}
+
+.page-btn {
+    padding: 8px 14px;
+    background-color: #4c4c9e;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.page-btn:hover {
+    opacity: 0.9;
+    color: #ffffff;
+}
+
+.page-btn.active {
+    background-color: #c0392b;
+    font-weight: 700;
+}
+
+/* Floating circular avatar */
+.box .profile {
+    position: absolute;
+    right: -6px;
+    top: -34px;
+    width: 90px;
+    height: 90px;
+    border: 8px solid #b6bfd1;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #dfe6f5;
+}
+
+.box .name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding-right: 80px;
+}
+
+.box .id {
+    color: #8a93a8;
+    font-size: 0.8rem;
+}
+
+.box .email,
+.box .phone,
+.box .address {
+    font-size: 0.88rem;
+    word-break: break-word;
+}
+
+.box .address {
+    color: #b6bfd1;
+}
+
+/* Custom dark forms */
+form.styled-form {
+    background-color: #1f2e4e;
+    color: #ffffff;
+    border-radius: 10px;
+    max-width: 540px;
+}
+
+form.styled-form .form-label {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+form.styled-form .invalid-feedback {
+    color: #ff8a8a;
+}
+
+form.styled-form .btn-submit {
+    background-color: #ffffff;
+    color: #29295b;
+    font-weight: 600;
+    border: none;
+}
+
+form.styled-form .btn-submit:hover {
+    background-color: #e6ecf7;
+}
+
+input#profile_picture {
+    border: 2px dashed #ffffff;
+}
+
+.empty {
+    color: #6c7a93;
+}
+
+/* Large desktop screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    .box {
+        max-width: 300px;
+    }
+}
+
+/* Tablet screens */
+@media (min-width: 577px) and (max-width: 991.98px) {
+    h1 {
+        font-size: 1.45rem;
+    }
+    .box {
+        max-width: 45%;
+    }
+    form.styled-form {
+        max-width: 90%;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+    .custom-nav,
+    .custom-nav ul {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    .box {
+        max-width: 100%;
+        margin-top: 24px;
+    }
+    .box .name {
+        padding-right: 68px;
+    }
+    .box .profile {
+        width: 74px;
+        height: 74px;
+        top: -26px;
+        border-width: 6px;
+    }
+    .stat-badge,
+    .stat-item {
+        width: 100%;
+    }
+}

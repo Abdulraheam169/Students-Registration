@@ -1,0 +1,29 @@
+# ---------------------------------------------------------------
+#  Security for the uploads folder.
+#  Only images may be served, and nothing here can ever be executed.
+# ---------------------------------------------------------------
+
+# 1. Never run scripts inside this directory.
+php_flag engine off
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+
+# 2. Block anything that is not a plain image file.
+<FilesMatch "\.(php|php3|php4|php5|php7|phtml|pl|py|cgi|asp|aspx|jsp|sh|exe|bat)$">
+    Require all denied
+</FilesMatch>
+
+# 3. Allow the image types used by the project.
+<FilesMatch "\.(jpe?g|png|gif|webp)$">
+    Require all granted
+</FilesMatch>
+
+# 4. Do not let browsers sniff a different content type.
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set Content-Security-Policy "default-src 'none'; img-src 'self'; style-src 'unsafe-inline'"
+</IfModule>
